@@ -16,10 +16,10 @@ OBJS = $(C_OBJS) $(CXX_OBJS)
 all: $(OBJS)
 
 %.o: %.c	
-	$(CC) $(CFLAGS) $< -o $@
+	@$(CC) $(CFLAGS) $< -o $@
 
 %.o: %.cc
-	$(CXX) $(CXXFLAGS) $< -o $@
+	@$(CXX) $(CXXFLAGS) $< -o $@
 
 .PHONY: clean
 clean:
