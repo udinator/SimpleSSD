@@ -6,7 +6,7 @@ CFLAGS= -I $(SRCDIR) -Wall -c
 LDFLAGS =
 # lib/ini files are in C, not C++
 SSD_C_SUBDIRS = lib/ini
-SSD_CXX_SUBDIRS = util log dram pal/old pal ftl icl hil hil/nvme
+SSD_CXX_SUBDIRS = util log dram pal/old pal ftl/common ftl icl hil hil/nvme
 C_SRCS = $(foreach dir,$(SSD_C_SUBDIRS),$(wildcard $(dir)/*.c))
 CXX_SRCS = $(foreach dir,$(SSD_CXX_SUBDIRS),$(wildcard $(dir)/*.cc))
 C_OBJS = $(patsubst %.c,%.o,$(C_SRCS))
